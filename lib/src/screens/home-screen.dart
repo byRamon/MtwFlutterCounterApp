@@ -26,21 +26,21 @@ class _CounterAppState extends State<CounterApp> {
         TextStyle(fontSize: 25, color: Color.fromRGBO(152, 152, 152, 1));
 
     CupertinoButton btnReset = CupertinoButton(
-        child: Icon(CupertinoIcons.refresh),
+        child: Icon(IconData(0xf21C, fontFamily: CupertinoIcons.iconFont, fontPackage: CupertinoIcons.iconFontPackage)),
         color: CupertinoColors.activeBlue,
         padding: EdgeInsets.symmetric(horizontal: 30.0),
         onPressed: () {
           agregar(-counts);
         });
     CupertinoButton btnAdd = CupertinoButton(
-        child: Icon(CupertinoIcons.add),
+        child: Icon(IconData(0xf2c7, fontFamily: CupertinoIcons.iconFont, fontPackage: CupertinoIcons.iconFontPackage)),
         color: CupertinoColors.activeBlue,
         padding: EdgeInsets.symmetric(horizontal: 30.0),
         onPressed: () {
           agregar(1);
         });
     CupertinoButton btnMinus = CupertinoButton(
-        child: Icon(CupertinoIcons.minus_circled),
+        child: Icon(IconData(0xf2f4, fontFamily: CupertinoIcons.iconFont, fontPackage: CupertinoIcons.iconFontPackage)),
         color: CupertinoColors.activeBlue,
         padding: EdgeInsets.symmetric(horizontal: 30.0),
         onPressed: () {
@@ -58,11 +58,11 @@ class _CounterAppState extends State<CounterApp> {
           children: <Widget>[
             Text(
               'Número de Clicks:',
-              style: estilo,
+              style: CupertinoTheme.of(context).textTheme.navLargeTitleTextStyle,
             ),
             Text(
               '$counts',
-              style: estiloContador,
+              style: CupertinoTheme.of(context).textTheme.navLargeTitleTextStyle,//estiloContador,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
